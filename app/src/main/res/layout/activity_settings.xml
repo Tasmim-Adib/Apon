@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/profile_icon"
+        app:civ_border_width="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        app:civ_border_color="#064B43"/>
+
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/fullnameEditText"
+
+        android:textColor="#064B43"
+
+        android:hint="Fullname"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/fullnameEditText"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearlayout1"
+        >
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/ageEditText"
+
+            android:hint="Age"
+            android:textColor="#01574F"
+            android:paddingLeft="15dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textCursorDrawable="@color/colorPrimaryDark"
+            android:layout_marginLeft="15dp"
+            android:layout_centerHorizontal="true"
+            />
+        <AutoCompleteTextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/BloodGroupEditText"
+
+            android:hint="Blood Group"
+            android:textColor="#01574F"
+            android:paddingLeft="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textCursorDrawable="@color/colorPrimaryDark"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout1"
+        android:layout_marginTop="15dp"
+
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearlayout2"
+        >
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/thanaEditText"
+            android:textColor="#01574F"
+            android:hint="Thana"
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textCursorDrawable="@color/colorPrimaryDark"
+            />
+        <AutoCompleteTextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/districtEditText"
+            android:textColor="#01574F"
+            android:hint="District"
+            android:paddingLeft="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textCursorDrawable="@color/colorPrimaryDark"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearlayout6"
+        >
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/ContactEditText"
+            android:textColor="#01574F"
+            android:hint="Contact No"
+            android:layout_marginLeft="1dp"
+            android:paddingLeft="15dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textCursorDrawable="@color/colorPrimaryDark"
+            />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:id="@+id/lastdonationEditText"
+
+                android:hint="Last Donation"
+
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textCursorDrawable="@color/colorPrimaryDark"
+                android:textColor="#01574F"
+                android:paddingLeft="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:clickable="true"
+                />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:src="@drawable/calender"
+                android:id="@+id/calenderIcon"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <AutoCompleteTextView
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:id="@+id/hospitalEditText"
+        android:textColor="#02685E"
+        android:hint="Nearest Hospital"
+        android:paddingLeft="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/linearlayout6"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        android:inputType="text"
+        />
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/submitButtonId"
+        android:layout_below="@+id/hospitalEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Submit"
+        android:background="@drawable/custom_button"
+        android:textColor="@android:color/white"
+
+        />
+
+
+</RelativeLayout>

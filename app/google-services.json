@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "913332593306",
+    "firebase_url": "https://evelyn-399e6.firebaseio.com",
+    "project_id": "evelyn-399e6",
+    "storage_bucket": "evelyn-399e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913332593306:android:d5eacd9f5810d18d273523",
+        "android_client_info": {
+          "package_name": "com.example.evelyn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913332593306-agntf96n23g6f8amdlda87gbbnt671a0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.evelyn",
+            "certificate_hash": "1ec4d928fb50409069386077fdd5c15b101d9ad2"
+          }
+        },
+        {
+          "client_id": "913332593306-3faapmcrsf3bgsv80nlso08i6lmo5dcp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFY9sH3bX_dnoYEgqfKumXZEaUM7XGy04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913332593306-3faapmcrsf3bgsv80nlso08i6lmo5dcp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

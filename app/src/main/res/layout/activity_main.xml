@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:id="@+id/Login_email_text"
+        android:hint="Email"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/email_icon"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_edit_text"
+        android:layout_below="@+id/loginwaveView"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:id="@+id/Login_password_text"
+        android:hint="Password"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/lock_icon"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Login_email_text"
+        android:background="@drawable/custom_edit_text"
+        android:inputType="textPassword"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/login_button"
+        android:background="@drawable/custom_button"
+        android:layout_below="@+id/Login_password_text"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_textview_id"
+        android:text="Need an Account? Sign Up"
+        android:layout_below="@+id/login_button"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <View
+        android:id="@+id/loginwaveView"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@+id/logintopView"
+        android:background="@drawable/wave" />
+
+
+    <View
+        android:id="@+id/logintopView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+
+            app:srcCompat="@drawable/ic_person_black_24dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="200dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="100dp"
+            android:text="Already Have an Account?"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+
+             />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

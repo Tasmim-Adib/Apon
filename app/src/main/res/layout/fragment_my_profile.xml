@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="320dp"
+       android:background="@drawable/image_back"
+       android:orientation="vertical"
+       android:id="@+id/my_account_linear"
+       android:gravity="center_horizontal"
+       >
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/my_account_Image"
+           android:layout_width="130dp"
+           android:layout_height="130dp"
+
+           android:src="@drawable/profile_icon"
+           android:layout_marginTop="5dp"
+           app:civ_border_color="@android:color/white"
+           app:civ_border_width="5dp" />
+       <TextView
+           android:id="@+id/my_account_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@id/my_account_Image"
+           android:textColor="@android:color/white"
+           android:textSize="21sp"
+           android:textStyle="bold" />
+       <TextView
+           android:id="@+id/my_account_district"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@id/my_account_name"
+           android:textColor="@android:color/white"
+           android:textSize="18sp"
+           android:textStyle="bold" />
+
+   </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/my_account_cardView"
+        app:cardCornerRadius="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="40dp"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="35dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="20dp"
+                android:id="@+id/cardlinear1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_blood"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#FF723A"
+                    android:paddingStart="10dp"
+                    android:id="@+id/my_account_bloodGroup"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="35dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="5dp"
+                android:id="@+id/cardlinear5"
+                android:layout_below="@+id/cardlinear1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="10dp"
+                    android:id="@+id/my_account_lastDonate"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="35dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="5dp"
+                android:layout_below="@+id/cardlinear5"
+                android:id="@+id/cardlinear2"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call_black"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="10dp"
+                    android:id="@+id/my_account_contact"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardlinear3"
+                android:paddingTop="5dp"
+                android:layout_below="@+id/cardlinear2"
+                android:paddingStart="35dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_local_hospital"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="10dp"
+                    android:id="@+id/my_account_hospital"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:id="@+id/cardlinear4"
+                android:paddingTop="5dp"
+                android:layout_below="@+id/cardlinear3"
+                android:paddingBottom="10dp"
+                android:paddingStart="35dp"
+                android:orientation="horizontal">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:visibility="gone"
+                   android:id="@+id/my_account_organization_image"
+                   android:src="@drawable/ic_organization"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Badhan"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        android:textColor="#FF723A"
+                        android:id="@+id/my_account_badhan"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sandhani"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        android:textColor="#FF723A"
+                        android:id="@+id/my_account_sandhani"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Red Crescent Society"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:textColor="#FF723A"
+                        android:id="@+id/my_account_redCrescent"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medicine Club"
+                        android:textSize="15sp"
+                        android:textColor="#FF723A"
+                        android:visibility="gone"
+                        android:id="@+id/my_account_medicineClub"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_below="@+id/my_account_linear"
+       android:id="@+id/abc"
+       >
+       <EditText
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/my_account_thana_editText"
+           android:layout_marginStart="15dp"
+           android:hint="Thana"
+           android:textColor="@android:color/black"
+           android:visibility="gone"
+
+           />
+       <AutoCompleteTextView
+           android:layout_width="200dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/my_account_district_editText"
+           android:layout_marginStart="15dp"
+           android:hint="District"
+           android:textColor="@android:color/black"
+           android:visibility="gone"
+
+           />
+   </LinearLayout>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_account_contact_editText"
+        android:layout_below="@+id/abc"
+        android:layout_marginStart="30dp"
+        android:paddingTop="5dp"
+        android:hint="Contact"
+        android:textColor="@android:color/black"
+       android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_account_hospital_editText"
+        android:layout_below="@+id/my_account_contact_editText"
+        android:layout_marginStart="30dp"
+        android:paddingTop="5dp"
+        android:hint="Nearest Hospital"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        />
+    <Button
+        android:layout_width="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/my_account_hospital_editText"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/my_account_done"
+        android:visibility="gone"
+        android:background="@drawable/custom_button"
+
+        />
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:layout_below="@+id/my_account_cardView"
+       android:layout_alignParentEnd="true"
+       android:layout_marginEnd="30dp"
+       android:layout_marginTop="10dp"
+       android:src="@drawable/ic_edit"
+       android:id="@+id/my_account_editButton"
+       />
+
+
+</RelativeLayout>

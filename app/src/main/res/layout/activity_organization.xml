@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image_2"
+    tools:context=".Organization">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/organization_toolbar_id"
+        android:visibility="gone"
+        >
+
+
+    </include>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organizations"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/organization_toolbar_id"
+        android:id="@+id/organization_textView"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/organization_textView"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            android:layout_column="0"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="10dp"
+            android:id="@+id/badhanCardview"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/badhan"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Badhan"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:id="@+id/medicineClubCardview"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/medicine_club"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine Club"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="0"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="10dp"
+            android:id="@+id/sandhaniCardview"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sandhani"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sandhani"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/redcrescnetCardview"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/redcrescent"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Red Crescent"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Society"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/register_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/organization_name_Textview"
+        android:layout_centerHorizontal="true"
+        android:text="Register You"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/Find_donor_organization_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/register_button"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:text="Find Donor Here"
+        android:textColor="@color/colorPrimaryDark"/>
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/organization_blood_group_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Blood Group"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/completeRegistrationTextview"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/institution_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Institution"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/organization_blood_group_edittext"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/badhan_institution_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Institution"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/organization_blood_group_edittext"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/sandhani_institution_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Institution"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/organization_blood_group_edittext"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/area_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Your Area"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/organization_blood_group_edittext"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/department_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Department Name"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/badhan_institution_edittext"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+    <AutoCompleteTextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:id="@+id/hall_edittext"
+        android:textColor="@android:color/white"
+        android:hint="Residentail Hall (optional)"
+        android:paddingStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/department_edittext"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/next1_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/badhan_institution_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/next2_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/department_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/badhan_done_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/hall_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/sandhani_done_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/sandhani_institution_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/redCrescent_done_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/area_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/medicine_club_done_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/institution_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/redCrescent_find_done_button"
+        android:background="@drawable/custom_search_button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/area_edittext"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/completeRegistrationTextview"
+        android:layout_below="@+id/organization_name_Textview"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:text="Please Complete your Registration..."
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/organization_name_Textview"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/organization_toolbar_id"
+        android:textColor="@android:color/white"
+
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/organization_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/organization_name_Textview"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+
+        />
+
+</RelativeLayout>

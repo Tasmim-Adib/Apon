@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF0F7"
+    tools:context=".ChatActivity">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/message_toolbar_id"
+        ></include>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/message_recycler"
+        android:layout_below="@+id/message_toolbar_id"
+        android:layout_above="@+id/adiblayout"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/adiblayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        >
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="50dp"
+            android:hint="Type your Message"
+            android:paddingLeft="10dp"
+            android:background="@drawable/custom_search_edit"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/type_message_editText_id"
+            />
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_send"
+            android:id="@+id/send_image_button"
+            android:layout_marginStart="5dp"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

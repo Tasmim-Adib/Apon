@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Evelyn</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_driver_map">Map</string>
+
+    <string name="Blood_Group">Blood Group</string>
+    <string name="hospital">Nearest Hospital</string>
+    <string name="lastDonation">Last Donation</string>
+    <string name="contact">Contact</string>
+
+</resources>
