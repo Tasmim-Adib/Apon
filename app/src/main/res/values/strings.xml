@@ -11,4 +11,26 @@
     <string name="lastDonation">Last Donation</string>
     <string name="contact">Contact</string>
 
+    <string name="about"> <b>Apon</b> is a non-profit blood donation platform lead by <b>Health Data Research Organization.</b>
+        Primarily Apon is dedicated to <b> Thalassemia</b> patients.As we know, Thalassemia patients need 1-2 bags of blood every month.
+        It is challenging to manage this amount of blood of their own. However,
+        if we work together, it will be easier for them. That is why Apon comes in.</string>
+
+    <string name="secondAbout">Previously, we managed donors by calling them on demand.
+        It is not only for Thalassemia patients but also for all critical patients.
+        However, why is Apon dedicated to Thalassemia now? There are many blood donation organizations
+        out there that contribute a lot. In a critical moment, they managed blood for patients selflessly.
+        That is why Apon is dedicated to thalassemia patients in Bangladesh.
+
+</string>
+    <string name="third">
+        However, <b>Bangladesh Thalassemia Foundation </b>
+        has a registration porta to manage donors.
+        We are trying to build an Android App for helping thalassemia patients.
+        By using this app, they can manage donors location-wise easily. Besides, they can find donors using Hospital
+        name. We have also made a link with the most reputed blood donation organization <b>Badhan, Sandhani, Red Crescent Society
+         and Medicine Club</b> . People can find donor through this organizations.
+    </string>
+
+
 </resources>

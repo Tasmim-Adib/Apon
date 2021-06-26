@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".ProfileChatActivity" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".Organization" />
@@ -34,18 +35,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".UpdateActivity"
-            android:parentActivityName=".ActualActivity" />
-        <activity
             android:name=".ChatActivity"
-            android:parentActivityName=".ActualActivity" />
+            android:parentActivityName=".ProfileChatActivity" />
         <activity android:name=".MessageActivity" />
         <activity android:name=".AccountActivity" />
-        <activity
-            android:name=".SearchActivity"
-            android:parentActivityName=".ActualActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

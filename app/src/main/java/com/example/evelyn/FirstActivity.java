@@ -57,6 +57,12 @@ public class FirstActivity extends AppCompatActivity {
                 sendUser(5);
             }
         });
+        historyCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendUser(4);
+            }
+        });
     }
 
     private void init() {
@@ -94,6 +100,10 @@ public class FirstActivity extends AppCompatActivity {
 
         else if(option == 1){
             Intent mainAcitivity = new Intent(getApplicationContext(),ProfileChatActivity.class);
+            startActivity(mainAcitivity);
+        }
+        else if(option == 4){
+            Intent mainAcitivity = new Intent(getApplicationContext(),HistoryActivity.class);
             startActivity(mainAcitivity);
         }
 

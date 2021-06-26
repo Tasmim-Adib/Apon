@@ -215,8 +215,8 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                                 final String chobi = dataSnapshot.child("imageUrl").getValue().toString();
                                 final String kobeDese = dataSnapshot.child("lastDate").getValue().toString();
                                 searchResultViewHolder.nameText.setText(nam);
-                                searchResultViewHolder.bloodGroupText.setText(bloodGroup);
-                                searchResultViewHolder.donationText.setText(kobeDese);
+                                searchResultViewHolder.bloodGroupText.setText("Blood Group : "+bloodGroup);
+                                searchResultViewHolder.donationText.setText("Last Donation : "+kobeDese);
                                 Picasso.get().load(chobi).into(searchResultViewHolder.image);
 
 

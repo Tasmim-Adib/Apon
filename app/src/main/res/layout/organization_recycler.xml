@@ -6,98 +6,71 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     >
-    <LinearLayout
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/recycler_profile_image"
             android:layout_width="100dp"
             android:layout_height="90dp"
-            android:src="@drawable/profile_icon"
+            android:layout_marginTop="20dp"
             app:civ_border_width="5dp"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="2dp"
-            app:civ_border_color="#064B43"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/view_linearLayout1"
+            />
 
-            >
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/recycler_name_id"
-                    android:text=""
-                    android:layout_marginLeft="10dp"
-                    android:textSize="20sp"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
+                android:id="@+id/recycler_name_id"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:id="@+id/recycler_institution_id"
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black"
-                    android:text="Last Donate : "
-
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/recycler_donation_id"
-                    android:text=""
-                    android:textColor="#EE0808"
-                    android:layout_marginLeft="2dp"
-                   android:textSize="16sp"
-
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/recycler_blood_Group_id"
-                    android:text=""
-                    android:layout_marginLeft="15dp"
-                    android:textColor="#740202"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
+                android:textColor="#08050C"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/recycler_institution_id"
-                    android:text=""
-                    android:textColor="#08050C"
-                    android:layout_marginStart="10dp"
-                    android:textSize="18sp"
-                    />
+                android:id="@+id/recycler_blood_Group_id"
+                android:textColor="#740202"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                />
 
-            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_donation_id"
+                android:textColor="#BB6F04"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+
+                />
 
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
 
 
 

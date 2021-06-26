@@ -45,6 +45,9 @@ public class ProfileChatActivity extends AppCompatActivity {
                    else if (item.getItemId() == R.id.chat_menu_id) {
                        selectedFragment = new MyChatFragment();
                     }
+                   else if(item.getItemId() == R.id.update_menu_id){
+                       selectedFragment = new UpdateFragment();
+                    }
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_Container_layout,
                             selectedFragment).commit();

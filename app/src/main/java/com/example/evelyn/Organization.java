@@ -516,8 +516,8 @@ public class Organization extends AppCompatActivity implements View.OnClickListe
                        final String organ_lastDate = dataSnapshot.child("lastDate").getValue().toString();
 
                        organizationResultViewHolder.nameTextView.setText(organ_name);
-                       organizationResultViewHolder.lastDonateTextView.setText(organ_lastDate);
-                       organizationResultViewHolder.groupTextView.setText("(" + searchGroup + ")");
+                       organizationResultViewHolder.lastDonateTextView.setText("Last Donate : "+organ_lastDate);
+                       organizationResultViewHolder.groupTextView.setText("Blood Group : "+ searchGroup);
                        organizationResultViewHolder.institutionTextView.setText(searchArea);
                        Picasso.get().load(organ_image).into(organizationResultViewHolder.circleImageView);
 
@@ -539,8 +539,8 @@ public class Organization extends AppCompatActivity implements View.OnClickListe
                    }
                });
                 organizationResultViewHolder.nameTextView.setText(upload.getName());
-                organizationResultViewHolder.lastDonateTextView.setText(upload.getLastDate());
-                organizationResultViewHolder.groupTextView.setText("(" + searchGroup + ")");
+                organizationResultViewHolder.lastDonateTextView.setText("Last Donate : "+upload.getLastDate());
+                organizationResultViewHolder.groupTextView.setText("Blood Group : "+ searchGroup);
                 organizationResultViewHolder.institutionTextView.setText(searchArea);
                 Picasso.get().load(upload.getImageUrl()).into(organizationResultViewHolder.circleImageView);
 

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image_2"
-    tools:context=".NeedBloodFragment">
+    tools:context=".SearchActivity">
     <include
         layout="@layout/app_bar_layout"
         android:id="@+id/search_toolbar_id"
@@ -13,6 +12,13 @@
 
 
     </include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/search_toolbar_id"
+        android:background="@drawable/image_back"
+        />
 
 
 
@@ -23,6 +29,7 @@
         android:hint="Blood Group"
         android:paddingStart="12dp"
         android:textColorHint="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textColor="@android:color/white"
@@ -76,6 +83,7 @@
         android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
         android:layout_below="@+id/search_blood_edit"
+        android:backgroundTint="@android:color/white"
         android:visibility="gone"
         />
     <AutoCompleteTextView
@@ -89,6 +97,7 @@
         android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
         android:layout_below="@+id/search_blood_edit"
+        android:backgroundTint="@android:color/white"
         android:visibility="gone"
         />
     <Button

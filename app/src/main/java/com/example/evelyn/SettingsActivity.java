@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -55,6 +56,7 @@ public class SettingsActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
     private DatabaseReference RootRef;
     private StorageReference storageReference;
+    private ProgressDialog loadingBar;
 
     String currentUserID;
     DatePickerDialog.OnDateSetListener setListener;
@@ -111,7 +113,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         circleImageView = (CircleImageView)findViewById(R.id.profile_image);
-
+        loadingBar = new ProgressDialog(this);
         fullnameEditText = (EditText)findViewById(R.id.fullnameEditText);
         ageEditText = (EditText)findViewById(R.id.ageEditText);
         bloodGroupEditText = (AutoCompleteTextView) findViewById(R.id.BloodGroupEditText);
@@ -183,8 +185,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent mainIntent = new Intent(getApplicationContext(),FirstActivity.class);
-                startActivity(mainIntent);
+
             }
         });
     }
@@ -261,17 +262,27 @@ public class SettingsActivity extends AppCompatActivity {
         }
         if(TextUtils.isEmpty(contact)){
             contactEdit.setError("contact number please");
+            contactEdit.requestFocus();
+            return;
+        }
+        if(TextUtils.isEmpty(lastDate)){
+            donationdate.requestFocus();
+            donationdate.setError("please enter the last donation date");
             return;
         }
         if(TextUtils.isEmpty(hospital)){
             hospitalEdit.setError("nearest hospital name");
+            hospitalEdit.requestFocus();
             return;
         }
-        if(TextUtils.isEmpty(lastDate)){
-            donationdate.setError("please enter the last donation date");
-            return;
-        }
+
         else{
+            loadingBar.setTitle("Register");
+            loadingBar.setMessage("Your information is uploading");
+
+            loadingBar.setCanceledOnTouchOutside(true);
+            loadingBar.show();
+
 
             StorageReference filePath = storageReference.child(currentUserID+"." +getFileExtension(imageUri));
             filePath.putFile(imageUri)
@@ -289,6 +300,9 @@ public class SettingsActivity extends AppCompatActivity {
 
                             RootRef.child(bloodGroup).child(currentUserID).setValue(hash);
                             RootRef.child("Users").child(currentUserID).setValue(upload);
+                            loadingBar.dismiss();
+                            Intent mainIntent = new Intent(getApplicationContext(),FirstActivity.class);
+                            startActivity(mainIntent);
                             Toast.makeText(SettingsActivity.this, "Successfully stored in firestore", Toast.LENGTH_SHORT).show();
 
                         }

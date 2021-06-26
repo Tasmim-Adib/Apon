@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image_2"
     tools:context=".Organization">
 
     <include
@@ -15,9 +14,12 @@
 
 
     </include>
-
-
-
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="400dp"
+       android:background="@drawable/image_back"
+       android:layout_below="@id/organization_toolbar_id"
+       />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +28,7 @@
         android:textStyle="bold"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:layout_below="@+id/organization_toolbar_id"
         android:id="@+id/organization_textView"
         />
@@ -211,9 +213,9 @@
 
     <Button
         android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:id="@+id/register_button"
-        android:background="@drawable/custom_search_button"
+
         android:layout_marginTop="25dp"
         android:layout_below="@+id/organization_name_Textview"
         android:layout_centerHorizontal="true"
@@ -224,9 +226,8 @@
         />
     <Button
         android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:id="@+id/Find_donor_organization_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/register_button"
         android:layout_centerHorizontal="true"
@@ -343,7 +344,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/next1_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/badhan_institution_edittext"
         android:layout_centerHorizontal="true"
@@ -354,7 +354,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/next2_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/department_edittext"
         android:layout_centerHorizontal="true"
@@ -366,7 +365,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/badhan_done_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/hall_edittext"
         android:layout_centerHorizontal="true"
@@ -377,7 +375,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/sandhani_done_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/sandhani_institution_edittext"
         android:layout_centerHorizontal="true"
@@ -388,7 +385,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/redCrescent_done_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/area_edittext"
         android:layout_centerHorizontal="true"
@@ -399,7 +395,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/medicine_club_done_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/institution_edittext"
         android:layout_centerHorizontal="true"
@@ -410,7 +405,6 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:id="@+id/redCrescent_find_done_button"
-        android:background="@drawable/custom_search_button"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/area_edittext"
         android:layout_centerHorizontal="true"

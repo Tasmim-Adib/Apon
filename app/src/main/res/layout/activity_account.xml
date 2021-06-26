@@ -176,6 +176,7 @@
                     android:textColor="@android:color/black"
                     android:paddingStart="10dp"
                     android:id="@+id/other_hospital"
+                    android:paddingEnd="5dp"
                     />
             </LinearLayout>
             <LinearLayout

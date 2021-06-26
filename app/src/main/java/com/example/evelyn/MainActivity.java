@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private EditText loginEmailEditText,loginPasswordEditText;
-    private Button loginButton;
+    private Button loginButton,signupButton;
     private TextView needAccountTextView,have_an_account;
 
     private FirebaseAuth mAuth;
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         loginButton = (Button)findViewById(R.id.login_button);
         needAccountTextView = (TextView)findViewById(R.id.log_textview_id);
         have_an_account = (TextView)findViewById(R.id.textView2);
+        signupButton = (Button)findViewById(R.id.signup_button);
+
         mAuth = FirebaseAuth.getInstance();
         loadingBar = new ProgressDialog(this);
 
@@ -51,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
         needAccountTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendUserToSignUpActivity();
+                loginButton.setVisibility(View.GONE);
+                have_an_account.setText("Need An Account?");
+                signupButton.setVisibility(View.VISIBLE);
+                needAccountTextView.setVisibility(View.GONE);
             }
         });
 
@@ -60,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loggedIn();
+            }
+        });
+
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                RegisterUser();
             }
         });
     }
@@ -106,13 +119,57 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void RegisterUser() {
+        String email = loginEmailEditText.getText().toString();
+        String password = loginPasswordEditText.getText().toString();
+
+
+        if(TextUtils.isEmpty(email)){
+            loginEmailEditText.requestFocus();
+            loginEmailEditText.setError("please enter an email");
+            return;
+        }
+        if(TextUtils.isEmpty(password)){
+            loginPasswordEditText.requestFocus();
+            loginPasswordEditText.setError("please give a password");
+            return;
+        }
+
+        else{
+
+            loadingBar.setTitle("Sign Up");
+            loadingBar.setMessage("Please wait, while your account is creating...");
+            loadingBar.setCanceledOnTouchOutside(true);
+            loadingBar.show();
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                sendUsertoActualActivity();
+                                Toast.makeText(MainActivity.this, "Account Created Successfully", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                            }
+                            else {
+                                String message = task.getException().toString();
+                                Toast.makeText(MainActivity.this, "Error : "+message, Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                            }
+
+                        }
+                    });
+        }
+    }
+
+
     private void sendUsertoFirstActivity() {
         Intent ActualIntent = new Intent(getApplicationContext(),FirstActivity.class);
         startActivity(ActualIntent);
     }
 
-    private void sendUserToSignUpActivity() {
-        Intent signUpIntent = new Intent(getApplicationContext(),SignUpActivity.class);
-        startActivity(signUpIntent);
+
+    private void sendUsertoActualActivity() {
+        Intent actualIntent = new Intent(getApplicationContext(),SettingsActivity.class);
+        startActivity(actualIntent);
     }
 }

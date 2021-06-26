@@ -42,6 +42,17 @@
         android:layout_centerHorizontal="true"
         android:text="Login"
         android:textColor="@android:color/white"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/signup_button"
+        android:background="@drawable/custom_button"
+        android:layout_below="@+id/Login_password_text"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
+        android:visibility="gone"
+        android:textColor="@android:color/white"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
